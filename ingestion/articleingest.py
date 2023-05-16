@@ -42,6 +42,18 @@ for articles in response.json()['articles']:
     text = soup.get_text()
     clean_text= text.replace("n", " ")
     clean_text= clean_text.replace("/", " ") 
+
+
+
+
+
+
+
+
+
+
+
+
     
 
     
