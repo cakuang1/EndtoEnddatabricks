@@ -1,0 +1,13 @@
+requests
+bs4 
+datetime 
+python-dotenv
+numpy
+boto3
+pandas
+praw
+textblob
+
+
+
+
