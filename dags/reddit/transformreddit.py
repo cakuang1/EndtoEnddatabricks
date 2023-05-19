@@ -24,11 +24,12 @@ def getPolarity(text):
  return TextBlob(text).sentiment.polarity
 
 
-df['Subjectivity'] = df['headline'].apply(getSubjectivity)
-df['Polarity'] = df['headline'].apply(getPolarity)
+df['Subjectivity'] = df['submission'].apply(getSubjectivity)
+df['Polarity'] = df['submission'].apply(getPolarity)
 df['date'] = date
 
-save_file('newgold',date,df)
+
+save_file('redditgold',date,df)
 
 
 

@@ -10,9 +10,6 @@ from textblob import TextBlob
 
 dirname = 'newgold'
 
-
-
-
 date = getdate()
 
 df = imp_file('newbronze',date)

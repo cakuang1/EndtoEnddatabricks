@@ -6,14 +6,15 @@ Extracts all comments with the word "ChatGpt" of the current day. This
 """
 
 
-import praw
+
+
+import os
+from dotenv import load_dotenv
 import pandas as pd
-today = datetime.now().date()
-# Subtract one day to get the date before today
-yesterday = today - timedelta(days=1)
-dateparameter = yesterday.strftime('%Y-%m-%d')
+from inputoutput import save_file,getdate
+import praw
 
-
+dateparameter = getdate()
 
 def re():
     reddit = praw.Reddit(
@@ -24,8 +25,6 @@ def re():
 
     # Specify the subreddit you want to search in
     subreddit = reddit.subreddit('all')  # You can change 'all' to a specific subreddit
-
-
 
     # Specify the keyword you want to search for in comments
     keyword = 'ChatGpt'
@@ -40,9 +39,11 @@ def re():
         new_row = {'submission':[post.title], 'source': ['Reddit']}
         new_df = pd.DataFrame(new_row)
         df = pd.concat([df, new_df], ignore_index=True)
-
-
+    print(df)
     save_file('redditbronze',dateparameter,df)
+
+
+
 
 
 

@@ -51,7 +51,7 @@ def save_file(directory,filename,df):
     """
 
     path = pathprefix +  '/' + directory + '/' + filename + '.csv'
-    df.to_csv(path)
+    df.to_csv(path,index=False)
     return None
 
 
