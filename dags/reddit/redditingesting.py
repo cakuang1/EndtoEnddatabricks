@@ -16,7 +16,10 @@ import praw
 
 dateparameter = getdate()
 
-def re():
+
+
+
+def redditingesting():
     reddit = praw.Reddit(
         client_id='s4bVKgZTQc1EYQAHkVOlxw',
         client_secret='2-6qBlx60zvs3N38ND8MzDg8CXi2kg',
